@@ -1,4 +1,4 @@
-import { RiMailLine, RiMapPinLine, RiPhoneLine, RiSendPlaneLine, RiInstagramLine, RiFacebookCircleLine, RiYoutubeLine } from 'react-icons/ri';
+import { RiMailLine, RiMapPinLine, RiPhoneLine, RiInstagramLine, RiFacebookCircleLine, RiYoutubeLine } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import logo from '../assets/img/SMK.png';
 
