@@ -5,7 +5,7 @@ const misiList = [
   'Menyelenggarakan pendidikan dan pelatihan dengan mengkombinasikan Kurikulum Nasional JSIT Indonesia dan Kepesantrenan.',
   'Menyelenggarakan pendidikan yang mengarah pada pengabdian masyarakat dalam upaya memberikan kontribusi nyata bagi kemaslahatan bangsa dan negara.',
   'Menyelenggarakan pendidikan keahlian dengan model-model pembelajaran yang mengarah pada pembekalan Life Skill dan Berwawasan Lingkungan.',
-  'Membina siswa menguasai Bahasa Internasional (Bahasa Arab dan Bahasa Inggris), berjiwa kewirausahaan dan ungul dalam Ilmu Pengetahuan dan Teknologi.',
+  'Membina siswa menguasai Bahasa Internasional (Bahasa Arab dan Bahasa Inggris), berjiwa kewirausahaan dan unggul dalam Ilmu Pengetahuan dan Teknologi.',
   'Menghasilkan Lulusan yang mampu bersaing di dunia kerja, study lanjut dan berwirausaha'
 ];
 
