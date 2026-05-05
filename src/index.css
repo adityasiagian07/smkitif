@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #fff7ed;
+  --color-primary-100: #ffedd5;
+  --color-primary-200: #fed7aa;
+  --color-primary-300: #fdba74;
+  --color-primary-400: #fb923c;
+  --color-primary-500: #f97316;
+  --color-primary-600: #ea580c;
+  --color-primary-700: #c2410c;
+  --color-primary-800: #9a3412;
+  --color-primary-900: #7c2d12;
+  --color-primary-950: #431407;
+
+  --color-accent-50: #fdf8f6;
+  --color-accent-100: #f2e8e5;
+  --color-accent-200: #eaddd7;
+  --color-accent-300: #d0b8ac;
+  --color-accent-400: #b08968;
+  --color-accent-500: #7f5539;
+  --color-accent-600: #6d4a30;
+  --color-accent-700: #583123;
+  --color-accent-800: #432818;
+  --color-accent-900: #331205;
+
+  --color-dark-50: #f8fafc;
+  --color-dark-100: #f1f5f9;
+  --color-dark-200: #e2e8f0;
+  --color-dark-300: #cbd5e1;
+  --color-dark-400: #94a3b8;
+  --color-dark-500: #64748b;
+  --color-dark-600: #475569;
+  --color-dark-700: #334155;
+  --color-dark-800: #1e293b;
+  --color-dark-900: #0f172a;
+  --color-dark-950: #020617;
+
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Poppins", sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-dark-200;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body text-dark-800 bg-white overflow-x-hidden antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-dark-950/60 backdrop-blur-md border border-white/10;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-accent-400 to-accent-600 bg-clip-text text-transparent;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply px-8 py-4 bg-primary-600 text-white font-bold rounded-2xl shadow-lg shadow-primary-600/20 hover:shadow-primary-600/40 hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .btn-accent {
+    @apply px-8 py-4 bg-accent-500 text-white font-bold rounded-2xl shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .card-modern {
+    @apply bg-white rounded-3xl border border-dark-100 p-8 shadow-sm hover:shadow-xl hover:shadow-dark-950/5 hover:-translate-y-1 transition-all duration-300;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-dark-50;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-200 rounded-full border-4 border-transparent bg-clip-padding hover:bg-dark-300;
+}
+
+/* Animations */
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.hero-overlay {
+  background: radial-gradient(circle at center, transparent 0%, rgba(15, 23, 42, 0.4) 100%),
+              linear-gradient(to bottom, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.8) 100%);
+}
+
+.nav-scrolled {
+  @apply bg-white/80 backdrop-blur-xl shadow-lg shadow-dark-950/5 py-3;
+}
+@layer utilities {
+  .bg-dot-grid {
+    background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  
+  .bg-dot-grid-white {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .bg-soft-gradient {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  }
+}
