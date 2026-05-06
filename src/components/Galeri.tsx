@@ -3,27 +3,14 @@ import Stack from './Stack';
 
 // Import Assets
 import g1 from '../assets/img/pramuka 1.JPG';
-import g2 from '../assets/img/pramuka 2.JPG';
-import g3 from '../assets/img/pramuka 3.JPG';
-import g4 from '../assets/img/pramuka 4.JPG';
 import g5 from '../assets/img/pramuka 5.JPG';
-import g6 from '../assets/img/pramuka 6.JPG';
-import g7 from '../assets/img/pramuka 7.JPG';
-
 import g8 from '../assets/img/upacara.jpg';
-import g9 from '../assets/img/upacara 2.JPG';
-import g10 from '../assets/img/upacara 3.JPG';
-import g11 from '../assets/img/upacara 4.JPG';
 import g12 from '../assets/img/upacara 5.jpg';
-import g13 from '../assets/img/upacara 6.jpg';
-
 import g14 from '../assets/img/guru dan karyawan.jpg';
-import g15 from '../assets/img/halbi.jpg';
 import g16 from '../assets/img/kerjasama.JPG';
-import g17 from '../assets/img/panahan.JPG';
 import g18 from '../assets/img/NetFest 1.jpg';
 
-const galleryImages = [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18];
+const galleryImages = [g1, g5, g8, g12, g14, g16, g18];
 
 export default function Galeri() {
   return (
