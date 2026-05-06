@@ -39,7 +39,7 @@ export default function Galeri() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
                 className="text-4xl md:text-5xl font-heading font-semibold text-dark-900 leading-tight mb-6"
-              > <span className="text-gradient">Galeri</span> Kami
+              > Galeri<span className="text-gradient"> Kami</span>
               </motion.h2>
               <p className="text-dark-500 text-lg leading-relaxed max-w-xl">
                 Dokumentasi berbagai kegiatan siswa mulai dari kepramukaan, upacara bendera, hingga kebersamaan guru dan karyawan yang membangun ekosistem pendidikan yang hangat dan profesional.

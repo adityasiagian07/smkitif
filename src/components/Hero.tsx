@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Parallax, Pagination, Autoplay } from "swiper/modules";
 import { RiArrowRightLine, RiYoutubeFill } from "react-icons/ri";
-import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 
 // Import Assets
 import hero1 from "../assets/img/upacara.jpg";
@@ -16,7 +17,7 @@ import "swiper/css/pagination";
 const slides = [
   {
     image: hero1,
-    title: "Terampil,\nMandiri, Qur'ani",
+    title: "Terampil,\nMandiri,\nQur'ani.",
     subtitle: "SMKIT IHSANUL FIKRI MUNGKID",
     description: "Integrasi Kurikulum Industri & Nilai Keislaman Terpadu.",
     typewriter: true,
@@ -35,54 +36,11 @@ const slides = [
   },
 ];
 
-function TypewriterText({ text }: { text: string }) {
-  const container = {
-    hidden: { opacity: 0 },
-    visible: (i = 1) => ({
-      opacity: 1,
-      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
-    }),
-  };
 
-  const child = {
-    visible: {
-      opacity: 1,
-      display: "inline-block",
-      transition: {
-        type: "spring" as const,
-        damping: 12,
-        stiffness: 100,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      display: "none",
-      transition: {
-        type: "spring" as const,
-        damping: 12,
-        stiffness: 100,
-      },
-    },
-  };
-
-  return (
-    <motion.div
-      style={{ overflow: "hidden", display: "flex", flexWrap: "wrap" }}
-      variants={container}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false }}
-    >
-      {text.split("").map((char, index) => (
-        <motion.span variants={child} key={index}>
-          {char === " " ? "\u00A0" : char}
-        </motion.span>
-      ))}
-    </motion.div>
-  );
-}
 
 export default function Hero() {
+  const [textColor, setTextColor] = useState("text-white");
+
   return (
     <section
       id="home"
@@ -143,21 +101,28 @@ export default function Hero() {
                 {slide.typewriter ? (
                   <div
                     data-swiper-parallax="-300"
-                    className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-8"
+                    className={`text-3xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-8 transition-colors duration-500 ${textColor}`}
                   >
-                    {slide.title.split("\n").map((line, i) => (
-                      <div
-                        key={i}
-                        className={i % 2 !== 0 ? "text-primary-500" : ""}
-                      >
-                        <TypewriterText text={line} />
-                      </div>
-                    ))}
+                    <TypeAnimation
+                      sequence={[
+                        slide.title.split('\n')[0],
+                        800,
+                        () => setTextColor("text-primary-500"),
+                        slide.title,
+                        2000,
+                        () => setTextColor("text-white"),
+                        "",
+                      ]}
+                      wrapper="div"
+                      speed={50}
+                      style={{ whiteSpace: "pre-line", display: "block" }}
+                      repeat={Infinity}
+                    />
                   </div>
                 ) : (
                   <h1
                     data-swiper-parallax="-300"
-                    className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-8"
+                    className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight mb-8"
                   >
                     {slide.title.split("\n").map((line, i) => (
                       <span

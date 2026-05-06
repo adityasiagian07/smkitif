@@ -43,7 +43,7 @@ export default function ProgramUnggulan() {
               className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-dark-900 leading-tight"
             >
               Program <br />
-              <span className="text-primary-600">Unggulan</span>
+              <span className="text-gradient">Unggulan</span>
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0 }}

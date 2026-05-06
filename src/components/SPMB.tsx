@@ -95,7 +95,7 @@ export default function SPMB() {
               <div className="text-primary-600 font-bold uppercase tracking-widest text-[10px] mb-4">SMKIT Ihsanul Fikri Mungkid</div>
               <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark-900 leading-tight mb-6">
                 Seleksi Penerimaan <br />
-                <span className="text-primary-600">Murid Baru 2026</span>
+                <span className="text-gradient">Murid Baru 2026/2027</span>
               </h2>
               <p className="text-dark-500 text-lg leading-relaxed max-w-xl">
                 Bergabunglah dengan ekosistem pendidikan IT terbaik yang memadukan keunggulan kompetensi industri dengan kedalaman akhlak islami.

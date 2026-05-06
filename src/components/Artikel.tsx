@@ -1,9 +1,14 @@
 import { motion } from 'framer-motion';
 import { RiCalendarLine, RiTimeLine, RiArrowRightLine, RiUserLine, RiHashtag } from 'react-icons/ri';
 
+// Import Assets
+import art1 from '../assets/img/NetFest 1.jpg';
+import art2 from '../assets/img/kerjasama.JPG';
+import art3 from '../assets/img/upacara 2.JPG';
+
 const articles = [
   {
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80',
+    image: art1,
     category: 'Kegiatan',
     title: 'SMKIT IF Juara Umum Lomba IT se-Jawa Tengah 2026',
     excerpt: 'Siswa-siswi kami kembali mendominasi ajang bergengsi tingkat provinsi...',
@@ -12,7 +17,7 @@ const articles = [
     readTime: '5 min'
   },
   {
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80',
+    image: art2,
     category: 'Akademik',
     title: 'Kunjungan Industri ke Data Center Telkom',
     excerpt: 'Melihat langsung bagaimana data center raksasa beroperasi...',
@@ -21,7 +26,7 @@ const articles = [
     readTime: '4 min'
   },
   {
-    image: 'https://images.unsplash.com/photo-1559223607-a43c990c692c?w=600&q=80',
+    image: art3,
     category: 'Tahfidz',
     title: 'Wisuda Tahfidz 30 Juz Angkatan ke-5',
     excerpt: 'Lulusan terbaik dengan hafalan mutqin siap mengabdi...',
@@ -52,7 +57,7 @@ export default function Artikel() {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="#"
+            href="https://www.smkitihsanulfikri.sch.id/blog/"
             className="group flex items-center gap-3 px-8 py-3 rounded-2xl bg-dark-50 border border-dark-100 font-semibold text-dark-700 hover:bg-primary-50 hover:text-primary-600 transition-all"
           >
             Lihat Semua Artikel

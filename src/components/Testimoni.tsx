@@ -59,7 +59,7 @@ export default function Testimoni() {
             Testimoni Alumni
           </p>
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-dark-900 mb-6">
-            Kisah Sukses <span className="text-primary-600">Alumni Kami</span>
+            Apa kata<span className="text-gradient"> Alumni?</span>
           </h2>
           <p className="text-dark-500 text-lg">
             Kisah sukses mereka adalah bukti nyata kualitas pendidikan di SMKIT Ihsanul Fikri.

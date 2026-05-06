@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           
           {/* Brand Col */}
-          <div className="space-y-8">
+          <div className="space-y-8 lg:col-span-2">
             <div className="flex items-center gap-3">
               <div className="w-14 h-14 flex items-center justify-center">
                 <img src={logo} alt="SMKIT IF Logo" className="w-full h-full object-contain" />
@@ -30,7 +30,7 @@ export default function Footer() {
             </div>
             <p className="text-dark-400 leading-relaxed">
               Implementasi dari Kurikulum Merdeka di SMKIT Ihsanul Fikri Mungkid adalah Merdeka Mandiri Berubah dengan menerapkan Kurikulum Merdeka menggunakan perangkat ajar yang sudah disediakan. <br />
-              Untuk menjadikannya bermakna, kurikulum operasional SMK IT Ihsanul Fikri Mungkid dikembangkan sesuai  dengan konteks dan kebutuhan peserta didik dan satuan pendidikan.
+              Untuk menjadikannya bermakna, kurikulum operasional SMK IT Ihsanul Fikri Mungkid dikembangkan sesuai dengan konteks dan kebutuhan peserta didik dan satuan pendidikan.
             </p>
             <div className="flex gap-4">
               {[
@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-8">
-            <h4 className="text-white font-heading font-semibold text-xl">NavigasiCepat</h4>
+            <h4 className="text-white font-heading font-semibold text-xl">Navigasi Cepat</h4>
             <ul className="space-y-4">
               {[
                 { name: 'Info SPMB 2026/2027', href: '#' },

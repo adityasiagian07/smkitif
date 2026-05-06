@@ -47,8 +47,8 @@ export default function Kurikulum() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-4xl md:text-5xl font-heading font-semibold text-dark-900"
-          >
-            <span className="text-gradient">Kurikulum</span> Pembelajaran
+          > Kurikulum
+            <span className="text-gradient"> Pembelajaran</span>
           </motion.h2>
         </div>
 

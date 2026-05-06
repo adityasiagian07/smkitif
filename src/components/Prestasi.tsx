@@ -56,7 +56,7 @@ export default function Prestasi() {
              transition={{ duration: 0.8 }}
              className="text-4xl md:text-5xl font-heading font-semibold text-dark-900"
           >
-            Prestasi <span className="text-gradient">Ihsanul Fikri</span>
+            Prestasi <span className="text-gradient">SMKIT Ihsanul Fikri</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -65,7 +65,7 @@ export default function Prestasi() {
             transition={{ delay: 0.2 }}
             className="text-dark-500 text-lg"
           >
-            Rekam jejak keberhasilan siswa dalam berbagai kompetisi bergengsi.
+            Rekam jejak keberhasilan siswa dalam berbagai kompetisi.
           </motion.p>
         </div>
 
