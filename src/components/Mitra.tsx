@@ -3,7 +3,6 @@ import { Autoplay, FreeMode } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import { SiCisco, SiRedhat, SiMikrotik, SiFortinet } from 'react-icons/si';
 import { FaAws } from 'react-icons/fa';
-import { RiShieldStarFill } from 'react-icons/ri';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -15,7 +14,6 @@ const partners = [
   { name: 'Cisco Academy', icon: SiCisco, color: 'text-blue-600' },
   { name: 'AWS Academy', icon: FaAws, color: 'text-orange-500' },
   { name: 'Fortinet Academy', icon: SiFortinet, color: 'text-red-600' },
-  { name: 'EC-Council', icon: RiShieldStarFill, color: 'text-indigo-800' },
 ];
 
 // Duplicate partners multiple times for ultra-smooth infinite loop
@@ -66,7 +64,7 @@ export default function Mitra() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <p className="text-center text-dark-300 text-[10px] font-bold uppercase tracking-[0.3em] mt-12 opacity-50">
+        <p className="text-center text-dark-950 text-[10px] font-bold uppercase tracking-[0.3em] mt-12 opacity-50">
           Official Education Partners & Industry Certifications
         </p>
       </div>
