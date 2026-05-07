@@ -7,7 +7,7 @@ import { TypeAnimation } from "react-type-animation";
 // Import Assets
 import hero1 from "../assets/img/upacara.jpg";
 import hero2 from "../assets/img/kerjasama.JPG";
-import hero3 from "../assets/img/panahan.JPG";
+import hero3 from "../assets/img/spmb.jpeg";
 
 // Import Swiper styles
 import "swiper/css";

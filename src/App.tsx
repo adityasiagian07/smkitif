@@ -1,3 +1,6 @@
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Profil from './components/Profil';
@@ -14,6 +17,14 @@ import Maps from './components/Maps';
 import Footer from './components/Footer';
 
 export default function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out',
+    });
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar />

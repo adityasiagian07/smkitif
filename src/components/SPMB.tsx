@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { RiFileTextLine, RiGroupLine, RiCheckboxCircleLine, RiCalendarEventLine, RiArrowRightLine, RiTrophyLine, RiBookOpenLine, RiHandHeartLine, RiGlobalLine, RiBuilding4Line, RiShieldCheckLine, RiArrowRightSLine } from 'react-icons/ri';
-import spmbImg from '../assets/img/upacara 3.JPG';
+import spmbImg from '../assets/img/spmb.jpeg';
 
 const steps = [
   {
@@ -86,10 +86,8 @@ export default function SPMB() {
         {/* Header Section */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
             className="space-y-8"
+            data-aos="fade-right"
           >
             <div>
               <div className="text-primary-600 font-bold uppercase tracking-widest text-[10px] mb-4">SMKIT Ihsanul Fikri Mungkid</div>
@@ -131,10 +129,8 @@ export default function SPMB() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
             className="relative"
+            data-aos="fade-left"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-dark-100 group">
               <img src={spmbImg} alt="SPMB" className="w-full h-[400px] object-cover transition-transform duration-1000 group-hover:scale-110" />

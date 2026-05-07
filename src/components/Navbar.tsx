@@ -50,6 +50,26 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        const offset = 80; // Navbar height offset
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      }
+    }
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -62,7 +82,7 @@ export default function Navbar() {
           <motion.a
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            href="#home"
+            href="/"
             className="flex items-center gap-3 group"
           >
             <div className="w-12 h-12 flex items-center justify-center">
@@ -72,7 +92,7 @@ export default function Navbar() {
               <span className={`text-xl font-heading font-semibold tracking-tighter block leading-none ${scrolled ? 'text-dark-900' : 'text-white'}`}>
                 SMKIT
               </span>
-              <span className={`text-[12px] font-semibold tracking-widest uppercase ${scrolled ? 'text-primary-600' : 'text-primary-400'}`}>
+              <span className={`text-xl font-semibold tracking-widest uppercase ${scrolled ? 'text-primary-600' : 'text-primary-400'}`}>
                 Ihsanul Fikri
               </span>
             </div>
@@ -92,6 +112,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
                   href={link.href}
+                  onClick={(e) => scrollToSection(e, link.href)}
                   className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
                     scrolled ? 'text-dark-700 hover:text-primary-600' : 'text-white/90 hover:text-white'
                   }`}
@@ -115,6 +136,7 @@ export default function Navbar() {
                           key={subItem.name}
                           href={subItem.href}
                           target={subItem.href.startsWith('http') ? '_blank' : '_self'}
+                          onClick={(e) => scrollToSection(e, subItem.href)}
                           className="px-5 py-3 text-xs font-semibold text-dark-600 hover:bg-primary-50 hover:text-primary-600 transition-all flex items-center justify-between group/sub"
                         >
                           {subItem.name}
@@ -153,7 +175,15 @@ export default function Navbar() {
               {navLinks.map((link) => (
                 <div key={link.name} className="space-y-1">
                   <div className="flex items-center justify-between p-4 rounded-xl text-dark-900 font-bold hover:bg-primary-50 transition-all">
-                    <a href={link.href} onClick={() => !link.dropdown && setIsOpen(false)}>{link.name}</a>
+                    <a 
+                      href={link.href} 
+                      onClick={(e) => {
+                        scrollToSection(e, link.href);
+                        if (!link.dropdown) setIsOpen(false);
+                      }}
+                    >
+                      {link.name}
+                    </a>
                   </div>
                   {link.dropdown && (
                     <div className="pl-6 space-y-1">
@@ -161,7 +191,10 @@ export default function Navbar() {
                         <a
                           key={sub.name}
                           href={sub.href}
-                          onClick={() => setIsOpen(false)}
+                          onClick={(e) => {
+                            scrollToSection(e, sub.href);
+                            setIsOpen(false);
+                          }}
                           className="block p-3 text-sm font-semibold text-dark-500 hover:text-primary-600 transition-all"
                         >
                           • {sub.name}
